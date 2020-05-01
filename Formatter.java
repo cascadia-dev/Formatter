@@ -1,25 +1,25 @@
 import java.util.*;
 class Formatter
 {
+  private static final boolean USE_FINAL_COMMA = false;
+
   public static String format(String[] sin)
   {
     Iterator<String> i=Arrays.asList(sin).iterator();
 
     if (!i.hasNext())
       return "";  // zero length
-    String s1=i.next();
+    String acc=i.next();
     if (!i.hasNext())
-      return s1;  // exactly one
+      return acc;  // exactly one
 
-    String acc=s1;
-   
     for (;;) {
       String s=i.next();
       if (!i.hasNext()) 
-        return acc=acc+", and "+s;
+        return acc=acc+(USE_FINAL_COMMA?",":"")+" and "+s;
       else
         acc=acc+", "+s;
     }
-    //never get here!";
+    //never get here!
   }
 }
