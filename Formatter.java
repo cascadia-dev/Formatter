@@ -1,11 +1,11 @@
 import java.util.*;
 class Formatter
 {
-  private static boolean USE_FINAL_COMMA = false;
+  private static boolean UseFinalComma = false;
 
   public static void setFinalComma(boolean isUse)
   {
-    USE_FINAL_COMMA = isUse;  
+    UseFinalComma = isUse;  
   }
 
   public static String format(String[] sin)
@@ -18,10 +18,10 @@ class Formatter
     if (!i.hasNext())
       return acc;  // exactly one
 
-    for (boolean commaize=false;;commaize=USE_FINAL_COMMA) {
+    for (boolean needsComma=false;;needsComma=UseFinalComma) {
       String s=i.next();
       if (!i.hasNext()) 
-        return acc+(commaize?",":"")+" and "+s;
+        return acc+(needsComma?",":"")+" and "+s;
       else
         acc=acc+", "+s;
     }
