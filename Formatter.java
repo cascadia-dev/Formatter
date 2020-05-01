@@ -18,16 +18,10 @@ class Formatter
     if (!i.hasNext())
       return acc;  // exactly one
 
-    String s=i.next();
-    if (!i.hasNext()) 
-      return acc+" and "+s; // exactly two
-    else
-      acc=acc+", "+s;
-
-    for (;;) {
-      s=i.next();
+    for (boolean commaize=false;;commaize=USE_FINAL_COMMA) {
+      String s=i.next();
       if (!i.hasNext()) 
-        return acc+(USE_FINAL_COMMA?",":"")+" and "+s;
+        return acc+(commaize?",":"")+" and "+s;
       else
         acc=acc+", "+s;
     }
