@@ -1,14 +1,29 @@
 import java.util.*;
-class Formatter
+class FancyFormatter
 {
-  private static boolean UseFinalComma = false;
-  private static String ConnectorSymbol = ", ";
-  private static String ConnectorString = " and ";
+  private boolean UseFinalComma = false;
+  private String ConnectorSymbol = ", ";
+  private String ConnectorString = " and ";
+
+  public void setFinalComma(boolean isUse)
+  {
+    UseFinalComma = isUse;  
+  }
+
+  public void setConnectorSymbol(String s)
+  { 
+    ConnectorSymbol = s;
+  }
+
+  public void setConnectorString(String s)
+  { 
+    ConnectorString = s;
+  }
 
   // make a string out of the input array 
   // by default the elements will be connected with a comma.
   // this can be changed by calling setConnectorSymbol e.g. to separate elements with a semicolon insead.
-  public static String format(String[] sin)
+  public String format(String[] sin)
   {
     Iterator<String> i=Arrays.asList(sin).iterator();
 

@@ -1,8 +1,14 @@
 class Main {
   public static void main(String[] args) {
     System.out.println("Hello world!");
+    System.out.println(Formatter.format(new String[] {"John"}));
+    System.out.println(Formatter.format(new String[] {"John","Quasimodo"}));
+    System.out.println(Formatter.format(new String[] {"John","Quasimodo","Zebulon"}));
+    System.out.println(Formatter.format(new String[] {"John","Quasimodo","Zebulon","Mustafa"}));
+
     {
-    Formatter f=new Formatter();
+    FancyFormatter f=new FancyFormatter();
+    f.setFinalComma(true);
     System.out.println(f.format(new String[] {"John"}));
     System.out.println(f.format(new String[] {"John","Quasimodo"}));
     System.out.println(f.format(new String[] {"John","Quasimodo","Zebulon"}));
@@ -10,16 +16,7 @@ class Main {
     }
 
     {
-    Formatter f=new Formatter();
-    f.setFinalComma(false);
-    System.out.println(f.format(new String[] {"John"}));
-    System.out.println(f.format(new String[] {"John","Quasimodo"}));
-    System.out.println(f.format(new String[] {"John","Quasimodo","Zebulon"}));
-    System.out.println(f.format(new String[] {"John","Quasimodo","Zebulon","Mustafa"}));
-    }
-
-    {
-    Formatter f=new Formatter();
+    FancyFormatter f=new FancyFormatter();
     f.setFinalComma(false);
     f.setConnectorSymbol("; ");
     f.setConnectorString("; and ");
@@ -30,7 +27,7 @@ class Main {
     }
 
     {
-    Formatter f=new Formatter();
+    FancyFormatter f=new FancyFormatter();
     f.setFinalComma(false);
     f.setConnectorSymbol(" & ");
     f.setConnectorString(" & ");
