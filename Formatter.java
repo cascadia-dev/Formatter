@@ -5,26 +5,21 @@ class Formatter
   private static String ConnectorSymbol = ",";
   private static String ConnectorString = " and ";
 
-  public static void reset()
+  public static void setFormat(boolean finalComma)
   {
-    UseFinalComma = false;
-    ConnectorSymbol = ",";
-    ConnectorString = " and ";
+    setFormat(finalComma, ",", " and ");
   }
 
-  public static void setFinalComma(boolean isUse)
+  public static void setFormat(String s1, String s2)
   {
-    UseFinalComma = isUse;  
+    setFormat(false,s1,s2);
   }
 
-  public static void setConnectorSymbol(String s)
-  { 
-    ConnectorSymbol = s;
-  }
-
-  public static void setConnectorString(String s)
-  { 
-    ConnectorString = s;
+  private static void setFormat(boolean finalComma, String s1, String s2)
+  {
+    UseFinalComma = finalComma;
+    ConnectorSymbol = s1;
+    ConnectorString = s2;
   }
 
   // make a string out of the input array 
