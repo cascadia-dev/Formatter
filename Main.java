@@ -8,9 +8,7 @@ class Main {
     System.out.println();
 
     Formatter.reset();
-    Formatter.setFinalComma(false);
-    Formatter.setConnectorSymbol(", ");
-    Formatter.setConnectorString(", and ");
+    Formatter.setFinalComma(true);
     System.out.println(Formatter.format(new String[] {"John"}));
     System.out.println(Formatter.format(new String[] {"John","Quasimodo"}));
     System.out.println(Formatter.format(new String[] {"John","Quasimodo","Zebulon"}));
@@ -19,7 +17,7 @@ class Main {
 
     Formatter.reset();
     Formatter.setFinalComma(false);
-    Formatter.setConnectorSymbol("; ");
+    Formatter.setConnectorSymbol(";");
     Formatter.setConnectorString("; and ");
     System.out.println(Formatter.format(new String[] {"John"}));
     System.out.println(Formatter.format(new String[] {"John, the plain","Quasimodo, the crooked"}));
@@ -29,7 +27,7 @@ class Main {
 
     Formatter.reset();
     Formatter.setFinalComma(false);
-    Formatter.setConnectorSymbol(" & ");
+    Formatter.setConnectorSymbol(" &");
     Formatter.setConnectorString(" & ");
     System.out.println(Formatter.format(new String[] {"John"}));
     System.out.println(Formatter.format(new String[] {"John, the plain","Quasimodo, the crooked"}));

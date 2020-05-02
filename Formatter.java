@@ -2,13 +2,13 @@ import java.util.*;
 class Formatter
 {
   private static boolean UseFinalComma = false;
-  private static String ConnectorSymbol = ", ";
+  private static String ConnectorSymbol = ",";
   private static String ConnectorString = " and ";
 
   public static void reset()
   {
     UseFinalComma = false;
-    ConnectorSymbol = ", ";
+    ConnectorSymbol = ",";
     ConnectorString = " and ";
   }
 
@@ -45,7 +45,7 @@ class Formatter
       if (!i.hasNext()) 
         return acc+(needsConnectorSymbol?ConnectorSymbol:"")+ConnectorString+s;
       else
-        acc=acc+ConnectorSymbol+s;
+        acc=acc+ConnectorSymbol+" "+s;
     }
     //never get here!
   }
