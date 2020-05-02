@@ -2,22 +2,22 @@ import java.util.*;
 class Formatter
 {
   // sinful!  state can be changed 
-  private static boolean UseFinalComma = false;
-  private static String ConnectorSymbol = ", ";
-  private static String ConnectorString = "and ";
+  private boolean UseFinalComma = false;
+  private String ConnectorSymbol = ", ";
+  private String ConnectorString = " and ";
 
-  public static void setFinalComma(boolean isUse)
+  public void setFinalComma(boolean isUse)
   {
     UseFinalComma = isUse;  
   }
 
-  public static void setConnectorSymbol(String s)
+  public void setConnectorSymbol(String s)
   { 
     ConnectorSymbol = s;
   }
 
   // using this option implies that the A+B format includes the string
-  public static void setConnectorString(String s)
+  public void setConnectorString(String s)
   { 
     ConnectorString = s;
   }
@@ -25,7 +25,7 @@ class Formatter
   // make a string out of the input array 
   // by default the elements will be connected with a comma.
   // this can be changed by calling setConnectorSymbol e.g. to separate elements with a semicolon insead.
-  public static String format(String[] sin)
+  public String format(String[] sin)
   {
     Iterator<String> i=Arrays.asList(sin).iterator();
 
