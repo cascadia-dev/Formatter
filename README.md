@@ -5,4 +5,4 @@
 # Tested on repl.it
 
 
-[![Run on Repl.it](https://repl.it/badge/github/cascadia-dev/repl2)](https://repl.it/github/cascadia-dev/repl2)
+[![Run on Repl.it](https://repl.it/badge/github/cascadia-dev/Formatter)](https://repl.it/github/cascadia-dev/Formatter)
