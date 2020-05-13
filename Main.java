@@ -5,37 +5,26 @@ class Main {
     System.out.println(Formatter.format(new String[] {"John","Quasimodo"}));
     System.out.println(Formatter.format(new String[] {"John","Quasimodo","Zebulon"}));
     System.out.println(Formatter.format(new String[] {"John","Quasimodo","Zebulon","Mustafa"}));
+    System.out.println();
 
-    {
-    FancyFormatter f=new FancyFormatter();
-    f.setFinalComma(true);
-    System.out.println(f.format(new String[] {"John"}));
-    System.out.println(f.format(new String[] {"John","Quasimodo"}));
-    System.out.println(f.format(new String[] {"John","Quasimodo","Zebulon"}));
-    System.out.println(f.format(new String[] {"John","Quasimodo","Zebulon","Mustafa"}));
-    }
+    Formatter.setFormat(true);
+    System.out.println(Formatter.format(new String[] {"John"}));
+    System.out.println(Formatter.format(new String[] {"John","Quasimodo"}));
+    System.out.println(Formatter.format(new String[] {"John","Quasimodo","Zebulon"}));
+    System.out.println(Formatter.format(new String[] {"John","Quasimodo","Zebulon","Mustafa"}));
+    System.out.println();
 
-    {
-    FancyFormatter f=new FancyFormatter();
-    f.setFinalComma(false);
-    f.setConnectorSymbol("; ");
-    f.setConnectorString("; and ");
-    System.out.println(f.format(new String[] {"John"}));
-    System.out.println(f.format(new String[] {"John, the plain","Quasimodo, the crooked"}));
-    System.out.println(f.format(new String[] {"John, the plain","Quasimodo, the crooked","Zebulon, the confused"}));
-    System.out.println(f.format(new String[] {"John, the plain","Quasimodo, the crooked","Zebulon, the confused","Mustafa, the learned"}));
-    }
+    Formatter.setFormat(";", "; and ");
+    System.out.println(Formatter.format(new String[] {"John"}));
+    System.out.println(Formatter.format(new String[] {"John, the plain","Quasimodo, the crooked"}));
+    System.out.println(Formatter.format(new String[] {"John, the plain","Quasimodo, the crooked","Zebulon, the confused"}));
+    System.out.println(Formatter.format(new String[] {"John, the plain","Quasimodo, the crooked","Zebulon, the confused","Mustafa, the learned"}));
+    System.out.println();
 
-    {
-    FancyFormatter f=new FancyFormatter();
-    f.setFinalComma(false);
-    f.setConnectorSymbol(" & ");
-    f.setConnectorString(" & ");
-
-    System.out.println(f.format(new String[] {"John"}));
-    System.out.println(f.format(new String[] {"John, the plain","Quasimodo, the crooked"}));
-    System.out.println(f.format(new String[] {"John, the plain","Quasimodo, the crooked","Zebulon, the confused"}));
-    System.out.println(f.format(new String[] {"John, the plain","Quasimodo, the crooked","Zebulon, the confused","Mustafa, the learned"}));
-    }
+    Formatter.setFormat(" &", " & ");
+    System.out.println(Formatter.format(new String[] {"John"}));
+    System.out.println(Formatter.format(new String[] {"John, the plain","Quasimodo, the crooked"}));
+    System.out.println(Formatter.format(new String[] {"John, the plain","Quasimodo, the crooked","Zebulon, the confused"}));
+    System.out.println(Formatter.format(new String[] {"John, the plain","Quasimodo, the crooked","Zebulon, the confused","Mustafa, the learned"}));
   }
 }
