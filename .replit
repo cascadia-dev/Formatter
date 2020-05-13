@@ -1,2 +1,2 @@
 language = "java10"
-run = "javac -classpath .:/run_dir/junit-4.12.jar:target/dependency/* -d . Formatter.java FancyFormatter.java Main.java && java -classpath .:/run_dir/junit-4.12.jar:target/dependency/* Main"
+run = "javac -classpath .:/run_dir/junit-4.12.jar:target/dependency/* -d . Formatter.java Main.java && java -classpath .:/run_dir/junit-4.12.jar:target/dependency/* Main"
